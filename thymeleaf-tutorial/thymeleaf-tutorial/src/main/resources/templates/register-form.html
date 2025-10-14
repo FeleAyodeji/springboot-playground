@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>User Registration Form</title>
+
+    <!-- Basic Custom CSS for layout, incorporating colors for visibility -->
+    <style type="text/css">
+<!--        body { font-family: sans-serif; background-color: #f0f4f8; padding: 20px; }-->
+<!--        .container { max-width: 600px; margin: 0 auto; background-color: #ffffff; padding: 30px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }-->
+<!--        h1 { color: #1B2551; text-align: center; margin-bottom: 25px; }-->
+
+        /* Layout Styles from the image */
+        label {
+            display: inline-block;
+            width: 200px;
+            margin: 5px;
+            text-align: left;
+            color: #1B2551;
+            font-weight: 600;
+        }
+
+        input[type=text], input[type=email], input[type=password], select, textarea {
+            display: inline-block;
+            width: 300px; /* Matched width from image */
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-bottom: 10px;
+            transition: border-color 0.3s;
+        }
+
+        input[type=text]:focus, input[type=email]:focus, input[type=password]:focus, select:focus, textarea:focus {
+            border-color: #F26A2A; /* Vibrant Orange on focus */
+            outline: none;
+        }
+
+        input[type=radio] {
+             margin-right: 5px;
+        }
+
+        button[type=submit] {
+            padding: 10px 20px;
+            background-color: #1B2551; /* Dark Navy Button */
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            margin-top: 20px;
+            display: block;
+            width: 100%;
+            font-size: 1.1em;
+            transition: background-color 0.3s;
+        }
+
+        button[type=submit]:hover {
+            background-color: #F26A2A; /* Orange on hover */
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>User Registration</h1>
+
+    <!--
+        Thymeleaf Form:
+        th:object="${userForm}" binds the form inputs to the UserForm object.
+    -->
+    <form role="form" method="post" th:action="@{/register/save}" th:object="${userForm}">
+
+        <!-- Full Name Input -->
+        <label>Full Name:</label>
+        <input type="text" th:field="*{name}" />
+        <br />
+
+        <!-- E-mail Input -->
+        <label>E-mail:</label>
+        <input type="email" th:field="*{email}" />
+        <br />
+
+        <!-- Password Input -->
+        <label>Password:</label>
+        <input type="password" th:field="*{password}" />
+        <br />
+
+        <!-- Gender Radio Buttons -->
+        <label>Gender:</label>
+        <input type="radio" th:field="*{gender}" value="Male" /> Male
+        <input type="radio" th:field="*{gender}" value="Female" /> Female
+        <br />
+
+        <!-- Profession Dropdown -->
+        <label>Profession:</label>
+        <select th:field="*{profession}">
+            <!-- Iterate over listProfession from the controller -->
+            <option th:each="p : ${listProfession}" th:value="${p}" th:text="${p}"></option>
+        </select>
+        <br />
+
+        <!-- Address Textarea -->
+        <label>Address:</label>
+        <textarea rows="5" cols="25" th:field="*{address}"></textarea>
+        <br />
+
+        <!-- Submit Button -->
+        <button type="submit">Register</button>
+    </form>
+</div>
+</body>
+</html>

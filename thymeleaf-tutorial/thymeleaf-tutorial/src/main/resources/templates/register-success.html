@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>User Registered Data</title>
+    <!-- Basic styling for presentation, using your brand's colors for emphasis -->
+    <style>
+        body { font-family: sans-serif; background-color: #f0f4f8; display: flex; justify-content: center; align-items: center; min-height: 100vh; margin: 0; }
+        .container {
+            width: 90%;
+            max-width: 500px;
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+            text-align: left;
+            border-top: 5px solid #F26A2A; /* Vibrant Orange border */
+        }
+        h1 {
+            color: #1B2551; /* Dark Navy/Indigo */
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 1.8em;
+        }
+        p {
+            font-size: 1.1em;
+            margin: 15px 0;
+            padding-bottom: 5px;
+            border-bottom: 1px dashed #eee;
+        }
+        strong {
+            color: #1B2551;
+            display: inline-block;
+            width: 150px; /* Aligns the data points */
+        }
+        span {
+            font-weight: normal;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>User Registered Data</h1>
+
+    <!-- Display the data fields from the userForm object passed from the controller -->
+    <div>
+        <p><strong>Name:</strong> <span th:text="${userForm.name}"></span></p>
+        <p><strong>Email:</strong> <span th:text="${userForm.email}"></span></p>
+        <p><strong>Password:</strong> <span th:text="${userForm.password}"></span></p>
+        <p><strong>Gender:</strong> <span th:text="${userForm.gender}"></span></p>
+        <p><strong>Address:</strong> <span th:text="${userForm.address}"></span></p>
+        <p><strong>Profession:</strong> <span th:text="${userForm.profession}"></span></p>
+        <!-- Note: The image shows 'Married' which wasn't in the UserForm model,
+             so I omitted it to match the Java model from previous steps. -->
+    </div>
+</div>
+</body>
+</html>

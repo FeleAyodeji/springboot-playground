@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>If Unless Attribute</title>
+</head>
+<body>
+<!-- Table structure including the border attribute as shown -->
+<table border="1">
+    <thead>
+    <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Role</th>
+        <!-- New column for conditional actions -->
+        <th>Actions</th>
+    </tr>
+    </thead>
+    <tbody>
+    <!-- Iterate over the 'users' list passed from the Spring Controller -->
+    <tr th:each="user : ${users}">
+        <!-- Display user properties -->
+        <td th:text="${user.name}"></td>
+        <td th:text="${user.email}"></td>
+        <td th:text="${user.role}"></td>
+        <td>
+            <!-- Conditional links based on user role -->
+
+            <!-- Only show Update and Delete if the role is ADMIN -->
+            <a th:href="@{/update}" th:if="${user.role} == 'ADMIN'">Update</a>
+            <a th:href="@{/delete}" th:if="${user.role} == 'ADMIN'">Delete</a>
+
+            <!-- Only show View if the role is NOT ADMIN (th:unless) -->
+            <a th:href="@{/view}" th:unless="${user.role} == 'ADMIN'">View</a>
+        </td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>

@@ -7,6 +7,14 @@
         <option value="$PROJECT_DIR$/springboot-first-app/springboot-first-app/pom.xml" />
         <option value="$PROJECT_DIR$/springboot-rest-api/springboot-rest-api/pom.xml" />
         <option value="$PROJECT_DIR$/springdatajpa/springdatajpa/pom.xml" />
+        <option value="$PROJECT_DIR$/springboot-restful-webservices/springboot-restful-webservices/pom.xml" />
+        <option value="$USER_HOME$/Downloads/spring-restful-webservices-dto/spring-restful-webservices-dto/pom.xml" />
+        <option value="$PROJECT_DIR$/springboot-restful-webservices-dto/springboot-restful-webservices-dto/pom.xml" />
+        <option value="$PROJECT_DIR$/springboot-exception-handling/springboot-exception-handling/pom.xml" />
+        <option value="$PROJECT_DIR$/todo-management/todo-management/pom.xml" />
+        <option value="$PROJECT_DIR$/springboot-transaction-demo/springboot-transaction-demo/pom.xml" />
+        <option value="$PROJECT_DIR$/springboot-search-rest-api/springboot-search-rest-api/pom.xml" />
+        <option value="$PROJECT_DIR$/thymeleaf-tutorial/thymeleaf-tutorial/pom.xml" />
       </list>
     </option>
   </component>

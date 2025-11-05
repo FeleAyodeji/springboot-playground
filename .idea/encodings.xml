@@ -1,8 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding">
+    <file url="file://$USER_HOME$/Downloads/spring-restful-webservices-dto/spring-restful-webservices-dto/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springboot-exception-handling/springboot-exception-handling/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/springboot-first-app/springboot-first-app/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/springboot-rest-api/springboot-rest-api/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springboot-restful-webservices-dto/springboot-restful-webservices-dto/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springboot-restful-webservices/springboot-restful-webservices/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springboot-search-rest-api/springboot-search-rest-api/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springboot-transaction-demo/springboot-transaction-demo/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/springdatajpa/springdatajpa/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/thymeleaf-tutorial/thymeleaf-tutorial/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/todo-management/todo-management/src/main/java" charset="UTF-8" />
   </component>
 </project>
